@@ -1,0 +1,26 @@
+<h1>Your Account</h1>
+<% @user.password = @user.password_confirmation = nil %>
+
+<h2>Update Your Information</h2>
+<% form_for @user, :url => account_update_path do |f| -%>
+  <p><%= label_tag 'name' %><br/>
+  <%= f.text_field :name %></p>
+
+  <p><%= label_tag 'email' %><br/>
+  <%= f.text_field :email %></p>
+  <p class="submit"><%= submit_tag 'Update' %></p>
+<% end -%>
+
+<% if current_user.identity_url.blank? -%>
+  <h2>Change Password</h2>
+  <% form_for @user, :url => account_update_path do |f| -%>
+
+    <p><%= label_tag 'password' %><br/>
+    <%= f.password_field :password %></p>
+
+    <p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
+    <%= f.password_field :password_confirmation %></p>
+
+    <p class="submit"><%= submit_tag 'Change Password' %></p>
+  <% end -%>
+<% end -%>

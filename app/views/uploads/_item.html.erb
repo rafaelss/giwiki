@@ -1,0 +1,9 @@
+<li id="upload_<%= upload.id %>">
+  <%= link_to image_tag(icon_path(upload)), upload.upload.url %>
+  <p>
+    <strong><%=h upload.title %></strong><br />
+    <%= text_field_tag '',
+      uploads_markdown_link(upload),
+      :onclick => 'this.select();' %>
+  </p>
+</li>

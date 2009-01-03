@@ -1,0 +1,40 @@
+<% form_for(@page) do |f| -%>
+<p>
+  <label>Title</label><br/>
+  <%= f.text_field(:title) %>
+</p>
+<p>
+  <%= f.text_area(:body, :cols => 80) %>
+</p>
+<p>
+  <label>Comment</label><br/>
+  <%= f.text_area(:message, :rows => 4, :cols => 80) %>
+</p>
+<p>
+  <%= f.submit('Salvar')%>
+</p>
+<% end -%>
+
+
+
+<% content_for :sidebar do -%>
+  <h2>Files</h2>
+  <div id="new_upload_div">
+    <%= link_to_function 'Upload a file', :id => 'new_upload_link' do |page|
+      page[:new_upload].show
+    end %>
+
+    <%= render :partial => 'uploads/new' %>
+    <script type="text/javascript">
+      $('#new_upload').hide()
+    </script>
+  </div>
+
+  <% form_remote_tag :url => uploads_path, :method => 'get', :update => 'uploads', :html => { :id=>"search_upload" } do %>
+    <%= label_tag :search, "Search:" %>
+    <%= text_field_tag :search, params[:search] %>
+  <% end %>
+
+
+  <%= render :file => "#{RAILS_ROOT}/app/views/uploads/index.html.erb" %>
+<% end -%>

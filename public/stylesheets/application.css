@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Defaults */
+body {
+  background: #fcfcfc;
+  color: #222;
+}
+
+body, p, ol, ul, td, th, input, textarea {
+  font-size: 14px;
+  line-height:1.8em;
+  font-family: Helvetica, Arial, sans-serif;
+}
+textarea {
+  width:620px;
+}
+img {
+  border:0;
+}
+p {
+  margin: 5px 0 10px;
+}
+
+a {
+  color:#be0000;
+}
+
+a:hover {
+  color:#eee;
+  background:#be0000;
+}
+a.image:hover {
+  background-color: transparent;
+  opacity:.7;
+}
+#footer a {
+  color:#eee;
+}
+#footer a:hover {
+  color:#be0000;
+  background:#eee;
+}
+.clean {
+  clear:both;
+}
+
+#content ul, #content ol, #sidebar ul, #sidebar ol {
+  margin: 5px 0 10px;
+}
+#content ol li, #sidebar ol li {
+  margin: 0 0 3px 40px;
+}
+#content ul li, #sidebar ul li {
+  list-style:square;
+  margin: 0 0 3px 20px;
+}
+#content ul.checklist li {
+  list-style:none;
+}
+/* /Defaults */
+
+/* Structure */
+.site {
+  width:920px;
+  margin: 0 auto;
+  clear:both;
+}
+#header {
+  background:#000 url(../images/header.png) repeat-x 0 0;
+  color: #eee;
+  line-height:1.3em;
+  padding:2px 0;
+}
+#nav {
+  background:#be0000;
+  color:#fff;
+}
+
+#content {
+  min-height: 200px;
+  padding:20px 0;
+  float:left;
+  width:630px;
+}
+#sidebar {
+  float:left;
+  width:258px;
+  border:6px solid #e6e6e6;
+  margin: 0 0 0 10px;
+  padding:5px;
+  margin:20px 0 0;
+}
+#sidebar h2 {
+  background:#e6e6e6;
+  font-size: 14px;
+  line-height:1.2em;
+  padding:4px;
+  margin:-5px -5px 0;
+}
+
+#footer {
+  clear:both;
+  font-size: .8em;
+  text-align:right;
+  background:#be0000;
+  border-top:8px solid #990000;
+  padding:10px 0;
+  color:#fff;
+}
+
+/* /Structure */
+
+/* Header */
+#header h1 {
+  float: left;
+  font-family: "Trebuchet MS";
+  font-size: 27px;
+  font-weight:normal;
+  padding:6px 10px;
+  margin:5px 0 0;
+}
+#header h1 a {
+  color:#fff;
+  text-decoration:none;
+}
+#header h1 a:hover {
+  color:#b30000;
+  background:transparent;
+}
+#header h1 .logo {
+  margin:-10px 10px 0 0;
+  float:left;
+}
+#userbox {
+  float:right;
+  width:280px;
+  background:#d6d6d6 url(../images/userbox.png) repeat-x 0 0;
+  color:#222;
+  font-size:.9em;
+  padding:6px;
+  margin:-2px 0;
+}
+#userbox .name {
+  margin:8px 0 0;
+  float:left;
+  font-weight:bold;
+}
+#userbox .name img {
+  float:left;
+  margin:-8px 3px 0 0;
+}
+#userbox .links {
+  float:right;
+  font-size:.9em;
+}
+
+/* /Header */
+/* Nav */
+
+#nav ul {
+  float:left;
+}
+#nav ul li {
+  float:left;
+  list-style:none;
+  padding:0 3px;
+}
+#nav ul li a {
+  float:left;
+  display:block;
+  color:#fff;
+  padding: 3px 6px;
+  text-decoration:none;
+}
+#nav ul li a:hover {
+  background:#990000;
+}
+
+#nav form {
+  float:right;
+  padding: 3px 4px 2px 10px;
+  margin:0;
+  width:176px;
+  background:#000 url(../images/search.png) no-repeat center center;
+}
+#nav input {
+  background:transparent;
+  border:none;
+  width:140px;
+  padding:3px;
+}
+#nav input.submit {
+  text-indent:-9999px;
+  overflow:hidden;
+  width:26px;
+  cursor:pointer
+}
+/* /Nav */
+
+#content h1 {
+  font-family: "Trebuchet MS";
+  font-size: 27px;
+  font-weight:normal;
+  margin: 0 0 15px 0;
+}
+
+/* Errors and Messages*/
+.flash_notice, .flash_error, #errorExplanation {
+  border: 1px solid #84BE5A;
+  padding: 4px 8px;
+  margin: 0 0 12px;
+}
+.flash_notice {
+  background: #E4F2DA;
+}
+
+.flash_error, #errorExplanation {
+  background:#FFF9A2;
+  border-color:#DFD97F;
+}
+#errorExplanation h2 {
+  font-size:14px;
+}
+#errorExplanation ul {
+  padding:0 0 0 20px;
+}
+.fieldWithErrors {
+  margin-top:-10px;
+}
+/* /Errors and Messages*/
+
+#new_upload_div {
+  margin:15px 0 0;
+}
+#new_upload {
+  margin:0 0 15px;
+}
+ul#uploads li {
+  list-style:none;
+  margin:0;
+  clear:both;
+}
+ul#uploads li img {
+  float:left;
+  margin:3px 5px 3px 0;
+}
+ul#uploads li p {
+  padding:2px 0 0;
+}
+ul#uploads li input {
+  width:180px;
+  font-size:.9em;
+}
+#new_upload_link {
+  float:right;
+  margin:-36px 4px 0 0;
+  line-height:1.2em;
+  font-size:.9em;
+}
+#last_commit {
+  background:#eee;
+  margin:-5px -5px 0;
+  padding:8px 5px 5px;
+}
+#last_commit .gravatar {
+  float:left;
+  margin: 0 3px 0;
+}
+#last_commit .author, #last_commit .date {
+  line-height:1.3em;
+  font-size:.9em;
+}
+#last_commit .date {
+  color:#666;
+}
+#last_commit .message {
+  clear:both;
+  padding:6px 0 0 16px;
+}
+ul#page_history li {
+  clear:both;
+  list-style:none;
+  padding:4px 0;
+  border-bottom:1px solid #ddd;
+  margin:0;
+}
+#page_history .gravatar {
+  float:left;
+  margin: 0 3px 0;
+}
+#page_history .date {
+  color:#666;
+}
+ul#search li {
+  clear:both;
+  list-style:none;
+  padding:4px 0;
+  border-bottom:1px solid #ddd;
+  margin:0;
+}

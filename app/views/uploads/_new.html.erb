@@ -1,0 +1,26 @@
+<% form_for(@upload, :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :upload %><br />
+    <%= f.file_field :upload, :size => 16 %>
+  </p>
+  <p>
+    <%= f.label :tags %><br />
+    <%= f.text_field :tags %>
+  </p>
+  <p class="submit">
+    <%= f.submit "Create" %> or <%= link_to_function "cancel", "$('#new_upload').hide()" %>
+  </p>
+<% end %>
+<script type="text/javascript">
+  file_upload("#new_upload", function (data) {
+    $('#uploads').prepend(data);
+
+    $("#new_upload")[0].reset();
+  });
+</script>

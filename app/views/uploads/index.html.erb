@@ -1,0 +1,5 @@
+<ul id="uploads">
+  <% for upload in @uploads %>
+    <%= render :partial => 'uploads/item', :locals => { :upload => upload } %>
+  <% end %>
+</ul>

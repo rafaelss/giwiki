@@ -1,0 +1,8 @@
+<ul id="search">
+  <% for page in @pages -%>
+    <li>
+      <h3><%= link_to(page.title, page_url(page)) %></h3>
+       </p><%= page.body %></p>
+    </li>
+  <% end -%>
+</ul>

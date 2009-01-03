@@ -1,0 +1,18 @@
+<h1>Edit User</h1>
+
+<% form_for @user do |f| -%>
+  <p><%= label_tag 'name' %><br/>
+  <%= f.text_field :name %></p>
+
+  <p><%= label_tag 'email' %><br/>
+  <%= f.text_field :email %></p>
+
+  <p><%= label_tag 'role' %><br/>
+  <%= f.select :role, User::OPTIONS_FOR_ROLE %></p>
+
+  <p class="submit">
+    <%= submit_tag 'Update' %>
+    or <%= link_to "Cancel", users_path, :class => 'cancel' %>
+
+  </p>
+<% end -%>

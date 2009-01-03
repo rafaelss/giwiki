@@ -1,0 +1,5 @@
+<ul>
+<% for page in @pages -%>
+<li><%= link_to(page.title, page_url(page)) %></li>
+<% end -%>
+</ul>
