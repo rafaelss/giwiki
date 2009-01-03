@@ -26,10 +26,11 @@ Rails::Initializer.run do |config|
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem 'mislav-will_paginate', :version => '~> 2.2.3', :lib => 'will_paginate', :source => 'http://gems.github.com'
+  config.gem 'mislav-will_paginate', :version => '~> 2.2.3', :lib => 'will_paginate', :source => 'http://gems.github.com/'
   config.gem 'rdiscount', :version => '~> 1.2.10'
   config.gem 'paperclip', :version => '~> 2.1.2'
   config.gem 'open4'
+  config.gem 'mojombo-grit', :version => '~> 0.9.4', :lib => 'grit', :source => 'http://gems.github.com/'
 
   # Only load the plugins named here, in the order given. By default, all plugins
   # in vendor/plugins are loaded in alphabetical order.
@@ -71,7 +72,6 @@ Rails::Initializer.run do |config|
   # config.active_record.observers = :cacher, :garbage_collector
 end
 
-require 'grit'
 require 'hasher'
 require 'permalink'
 
